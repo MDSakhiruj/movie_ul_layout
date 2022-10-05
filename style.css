@@ -13,10 +13,14 @@ body{
     margin: 0;
 }
 header{
-    padding: 1rem;
+    padding: 2rem 2rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: var(--secondary-color);
+    
+}
+header h3{
+    color: aliceblue;
 }
 .search{
     background-color: transparent;
@@ -26,6 +30,7 @@ header{
     font-size: 1rem;
     padding: 0.5rem 1rem;
     color: #fff;
+    margin-top: 8px;
 }
 .search::placeholder{
     color: #7378c5;
@@ -38,6 +43,10 @@ header{
 main{
     display: flex;
     flex-wrap: wrap;
+    justify-items: center;
+    /* margin: auto; */
+    align-content: center;
+    justify-content: space-around;
 }
 
 .movie{
@@ -93,4 +102,16 @@ main{
 }
 .movie:hover .overview{
     transform: translateY(0);
+}
+
+@media screen and (max-width:460px) {
+    .movie{
+        width: 150px;
+    }
+    .movie-info h3{
+        font-size: 12px;
+    }
+    .movie-info span{
+        font-size: 10px;
+    }
 }
